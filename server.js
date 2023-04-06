@@ -4,7 +4,7 @@ import { rps, rpsls } from './lib/rpsls.js';
 
 const app = express();
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: false }))
 
 var argv = minimist(process.argv.slice(2));
 const PORT = argv.port ? argv.port : 5000;
