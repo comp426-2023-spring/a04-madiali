@@ -26,10 +26,19 @@ app.get('/app/rpsls', (req, res) => {
 })
 
 app.get('/app/rps/play', (req, res) => {
-    let shot = req.body.shot;
-    if (shot) {
-        res.send(rps(shot))
-    }
+    res.send(rps(req.body.shot));
+})
+
+app.get('/app/rpsls/play', (req, res) => {
+    res.send(rpsls(req.body.shot));
+})
+
+app.get('/app/rps/play/:shot', (req, res) => {
+    res.send(rps(req.params.shot));
+})
+
+app.get('/app/rpsls/play/:shot', (req, res) => {
+    res.send(rpsls(req.params.shot));
 })
 
 app.get('*', (req, res) => {
