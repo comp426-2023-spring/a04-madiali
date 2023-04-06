@@ -25,6 +25,14 @@ app.get('/app/rpsls', (req, res) => {
     res.send(rpsls());
 })
 
+app.get('/app/rps/play', (req, res) => {
+    res.send(rps(req.query.shot));
+})
+
+app.get('/app/rpsls/play', (req, res) => {
+    res.send(rpsls(req.query.shot));
+})
+
 app.post('/app/rps/play', (req, res) => {
     res.send(rps(req.body.shot));
 })
