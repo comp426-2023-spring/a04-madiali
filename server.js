@@ -1,6 +1,6 @@
 import express from 'express';
 import minimist from 'minimist';
-import { rps, rpsls } from './lib/a03-madiali/lib/rpsls.js';
+import { rps, rpsls } from './lib/rpsls.js';
 
 const app = express();
 app.use(express.json())
